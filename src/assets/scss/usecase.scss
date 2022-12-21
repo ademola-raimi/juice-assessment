@@ -1,0 +1,23 @@
+.use-cases,
+.use-cases-1 {
+  -webkit-backdrop-filter: blur(40px) brightness(100%);
+  align-items: center;
+  backdrop-filter: blur(40px) brightness(100%);
+  background-color: var(--white);
+  border: 0px none;
+  border-radius: 12px;
+  display: flex;
+  gap: 600px;
+  padding: 40px;
+  position: relative;
+  width: fit-content;
+}
+
+.operating-businesses,
+.operating-businesses-1 {
+  letter-spacing: 0.37px;
+  line-height: 32px;
+  white-space: nowrap;
+  width: 282px;
+}
+
