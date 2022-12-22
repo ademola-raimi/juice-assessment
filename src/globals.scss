@@ -1,0 +1,255 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "Roobert-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/assets/fonts/Displaay Type - Roobert Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Augusta-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/fonts/Augusta.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roobert-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/fonts/Roobert-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Roobert-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/fonts/Roobert-Medium.otf") format("opentype");
+}
+
+:root { 
+  --black: #111111;
+  --cape-cod: #434343;
+  --desert-storm: #f8f8f8;
+  --gallery: #eeeeee;
+  --iron: #d7d7d7;
+  --perfume: #d1c2f2;
+  --white: #ffffff;
+ 
+  --font-size-xxs: 12px;
+  --font-size-xs: 14px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 24px;
+  --font-size-xl: 28px;
+  --font-size-xxl: 40px;
+  --font-size-xxxl: 56px;
+  
+  --font-family-roobert-bold: "Roobert-Bold", Helvetica;
+  --font-family-roobert-medium: "Roobert-Medium", Helvetica;
+  --font-family-roobert-regular: "Roobert-Regular", Helvetica;
+  --font-family-augusta-regular: "augusta-Regular", Helvetica;
+}
+.roobert-regular-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-bold-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-regular-normal-gallery-18px {
+  color: var(--gallery);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-regular-normal-cape-cod-12px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-bold-black-28px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-bold-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-medium-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-roobert-medium);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.roobert-regular-normal-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-regular-normal-cape-cod-16px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-bold-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-bold-black-56px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-regular-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-bold-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-bold-black-40px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-regular-normal-desert-storm-18px {
+  color: var(--desert-storm);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-regular-normal-cape-cod-18px {
+  color: var(--cape-cod);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roobert-bold-gallery-28px {
+  color: var(--gallery);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-bold-desert-storm-28px {
+  color: var(--desert-storm);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.roobert-bold-gallery-40px {
+  color: var(--gallery);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 65.125rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.w-full {
+  width: 100%;
+}
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+}
+// @media screen and (min-width: 1024px) {
+
+// }
+// @media screen and (min-width: 1280px) {
+
+// }

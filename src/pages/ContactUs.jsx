@@ -7,7 +7,7 @@ import '../assets/scss/contactus.scss';
 
 export const ContactUs = () => {
     return (
-        // <Layout>
+        <Layout>
             <div className="frame-296">
                 <div className="top-1">
                     <div className="frame-296-1">
@@ -70,7 +70,7 @@ export const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        // </Layout>
+        </Layout>
     );
 }
 

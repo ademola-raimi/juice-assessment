@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    backdrop-filter: blur(40px) brightness(100%);
+    -webkit-backdrop-filter: blur(40px) brightness(100%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.25) 100%);
+    max-width: 90rem;
+    padding: 1rem;
+    // position: fixed;
+    // left: 0;
+    // top: 0;
+    z-index: 4;
+}
+
+.logo {
+    cursor: pointer;
+    height: 1.5rem;
+    margin-top: 0;
+    width: 4.5rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+  
+.nav-item {
+    cursor: pointer;
+    letter-spacing: 0.37px;
+    line-height: 1.5rem;
+}
+
+.header.header-2 {
+    left: unset;
+    position: relative;
+    top: unset;
+    z-index: unset;
+}
+  
+
+@media screen and (min-width: 640px) {
+    .header {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+}

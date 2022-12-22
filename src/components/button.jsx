@@ -1,59 +1,26 @@
 import React from "react";
 
-const size = {
-  width: {
-    tiny: "w-15",
-    xs: "w-26",
-    sm: "w-32",
-    md: "w-48",
-    lg: "w-52",
-    auto: "auto",
-    full: "w-full",
-  },
+export const Button = (props) => {
+    const { className, children } = props;
+    return (
+        <button
+            className={`button roobert-bold-black-16px ${className || ""}`}
+        >
+            {children}
+        </button>
+    );
 };
 
-const variants = {
-  type(
-    variant,
-    color,
-    bg,
-    border,
-    otherCss
-  ){
-    return variant === "outline"
-      ? `${bg} ${color} border ${border} ${otherCss}`
-      : `${bg} ${color} ${otherCss}`;
-  },
-};
 
-const Button = ({
-  color = "text-black",
-  width = "sm",
-  padding = "px-4 py-2",
-  variant = "normal",
-  children,
-  bg,
-  border,
-  otherCss,
-  type,
-  fontSize = "text-base"
-}) => {
-  return (
-    <button
-      className={`${padding} font-bold rounded-xl ${
-        size.width[width]
-      } ${variants.type(
-        variant,
-        color,
-        bg,
-        border,
-        otherCss
-      )} ${fontSize}`}
-      type={type}
-    >
-      {children}
-    </button>
-  );
-};
+export const ButtonIcon = (props) => {
+    const { className, children } = props;
+    return (
+        <div className={`button ${className || ""}`}>
+            <div className="icons24-arrow-down-2">
+            <img className="union" src="/img/union@2x.svg" alt="Union" />
+            {children}
+            </div>
+        </div>
+    );
+}
 
-export default Button;

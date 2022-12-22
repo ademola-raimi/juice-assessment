@@ -1,0 +1,22 @@
+.button {
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    &.button-white-bg {
+        color: "var(--black)";
+        background-color: var(--white);
+        padding: 0.5rem 1.125rem;
+    }
+    &.button-black-bg {
+        color: var(--white);
+        background-color: var(--black);
+        padding: 0.5rem 1.125rem;
+    }
+    &.button-outline {
+        border: 1px solid var(--black);
+        background: transparent;
+        padding: 0.5rem 1.125rem;
+    }
+}
+
