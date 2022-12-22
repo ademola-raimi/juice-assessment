@@ -24,11 +24,11 @@ const Header = () => {
                     <div className="nav-item">Guidance</div>
                 </Link>
             </div>
-            <Button
-                className="button-outline"
-            >
-                Contact Us
-            </Button>
+            <Link to="/contact-us">
+                <Button className="button-outline">
+                    Contact Us
+                </Button>
+            </Link>
         </div>
     );
 }
