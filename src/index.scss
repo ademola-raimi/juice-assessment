@@ -98,17 +98,6 @@ hr, .hr {
   }
 }
 
-.credentials-icons {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-p {
-  letter-spacing: 0.37px;
-  line-height: 26px;
-}
-
 @media screen and (min-width: 768px) {
   .use-case-wrapper {
     gap: 2.5rem;
@@ -121,9 +110,5 @@ p {
           margin-bottom: 2rem;
       }
     }
-  }
-  .credentials-icons {
-    display: flex;
-    justify-content: space-between;
   }
 }
