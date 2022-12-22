@@ -27,21 +27,34 @@
 
 :root { 
   --black: #111111;
-  --cape-cod: #434343;
-  --desert-storm: #f8f8f8;
-  --gallery: #eeeeee;
-  --iron: #d7d7d7;
-  --perfume: #d1c2f2;
+  --grey: #434343;
+  --light: #f8f8f8;
+  --lighter-grey: #eeeeee;
+  --light-grey: #d8d8d8;
+  --purple: #d1c2f2;
+  --dark-purple: #5D57F6;
   --white: #ffffff;
  
-  --font-size-xxs: 12px;
-  --font-size-xs: 14px;
-  --font-size-s: 16px;
-  --font-size-m: 18px;
-  --font-size-l: 24px;
-  --font-size-xl: 28px;
-  --font-size-xxl: 40px;
-  --font-size-xxxl: 56px;
+  --font-size-xxs: 0.75rem;
+  --font-size-xs: 0.875rem;
+  --font-size-s: 1rem;
+  --font-size-m: 1.125rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.5rem;
+  --font-size-xxxl: 3.5rem;
+
+  --line-height-xxs: 26px;
+  --line-height-s: 24px;
+  --line-height-m: 32px;
+  --line-height-mm: 36px;
+  --line-height-mmm: 38px;
+  --line-height-xl: 42px;
+  --line-height-xxl: 54px;
+  --line-height-xxxl: 70px;
+
+  --border-radius: 0.75rem;
+  --letter-spacing: 0.37px;
   
   --font-family-roobert-bold: "Roobert-Bold", Helvetica;
   --font-family-roobert-medium: "Roobert-Medium", Helvetica;
@@ -54,6 +67,16 @@
   font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-s);
+}
+
+.roobert-regular-normal-black-long-16px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--line-height-mm);
 }
 
 .roobert-bold-black-18px {
@@ -62,22 +85,43 @@
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-m);
 }
 
-.roobert-regular-normal-gallery-18px {
-  color: var(--gallery);
+.roobert-bold-black-long-18px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--line-height-mmm);
+}
+
+.roobert-regular-normal-lighter-grey-18px {
+  color: var(--lighter-grey);
   font-family: var(--font-family-roobert-regular);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-m);
 }
 
-.roobert-regular-normal-cape-cod-12px {
-  color: var(--cape-cod);
+.roobert-regular-normal-grey-12px {
+  color: var(--grey);
   font-family: var(--font-family-roobert-regular);
   font-size: var(--font-size-xxs);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-xxs);
+}
+
+.roobert-regular-normal-light-grey-12px {
+  color: var(--light-grey);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--line-height-xxs);
 }
 
 .roobert-bold-black-28px {
@@ -86,6 +130,16 @@
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xl);
+}
+
+.roobert-bold-black-small-28px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--line-height-m);
 }
 
 .roobert-bold-black-24px {
@@ -102,6 +156,7 @@
   font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 500;
+  line-height: var(--line-height-s);
 }
 
 .roobert-regular-normal-black-18px {
@@ -110,14 +165,16 @@
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-m);
 }
 
-.roobert-regular-normal-cape-cod-16px {
-  color: var(--cape-cod);
+.roobert-regular-normal-grey-16px {
+  color: var(--grey);
   font-family: var(--font-family-roobert-regular);
   font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-s);
 }
 
 .roobert-bold-black-16px {
@@ -126,14 +183,16 @@
   font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-s);
 }
 
 .roobert-bold-black-56px {
   color: var(--black);
   font-family: var(--font-family-roobert-bold);
-  font-size: 56px;
+  font-size: var(--font-size-xxxl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xxxl);
 }
 
 .roobert-regular-normal-black-14px {
@@ -142,6 +201,7 @@
   font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-m);
 }
 
 .roobert-bold-white-18px {
@@ -150,6 +210,7 @@
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-m);
 }
 
 .roobert-bold-black-40px {
@@ -158,50 +219,61 @@
   font-size: var(--font-size-xxl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xxl);
 }
 
-.roobert-regular-normal-desert-storm-18px {
-  color: var(--desert-storm);
+.roobert-regular-normal-light-18px {
+  color: var(--light);
   font-family: var(--font-family-roobert-regular);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-m);
 }
 
-.roobert-regular-normal-cape-cod-18px {
-  color: var(--cape-cod);
+.roobert-regular-normal-grey-18px {
+  color: var(--grey);
   font-family: var(--font-family-roobert-regular);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
+  line-height: var(--line-height-m);
 }
 
-.roobert-bold-gallery-28px {
-  color: var(--gallery);
+.roobert-bold-lighter-grey-28px {
+  color: var(--lighter-grey);
   font-family: var(--font-family-roobert-bold);
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xl);
 }
 
-.roobert-bold-desert-storm-28px {
-  color: var(--desert-storm);
+.roobert-bold-light-28px {
+  color: var(--light);
   font-family: var(--font-family-roobert-bold);
   font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xl);
 }
 
-.roobert-bold-gallery-40px {
-  color: var(--gallery);
+.roobert-bold-lighter-grey-40px {
+  color: var(--lighter-grey);
   font-family: var(--font-family-roobert-bold);
   font-size: var(--font-size-xxl);
   font-style: normal;
   font-weight: 700;
+  line-height: var(--line-height-xxl);
 }
 
 .container {
-  max-width: 65.125rem;
+  max-width: 62.625rem;
+  margin: 0 auto;
+}
+
+.light-bg {
+  background-color: var(--light);
 }
 
 .mx-auto {
@@ -236,17 +308,20 @@
 .align-start {
   align-items: flex-start;
 }
+.text-uppercase {
+  text-transform: uppercase;
+}
 
-@media screen and (min-width: 640px) {
-  .container {
-    max-width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-}
+// @media screen and (min-width: 640px) {
+//   .container {
+//     max-width: 100%;
+//   }
+// }
+// @media screen and (min-width: 768px) {
+//   .container {
+//     max-width: 100%;
+//   }
+// }
 // @media screen and (min-width: 1024px) {
 
 // }

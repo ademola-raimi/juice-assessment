@@ -1,0 +1,256 @@
+.home-section-1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    .section-1-subsection1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        background-color: var(--white);
+        border-radius: var(--border-radius);
+        backdrop-filter: blur(20px);
+        align-items: center;
+        & > div {
+            padding: 1.5rem;
+        }
+        h3 {
+            margin-bottom: 1rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .section-1-subsection2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        background-color: var(--dark-purple);
+        border-radius: var(--border-radius);
+        padding: 1.5rem 1.5rem 0;
+    }
+    .section-1-info-box-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .section-1-subsection3 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        background-color: var(--black);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        ul li {
+            gap: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.home-section-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    .section-2-header-text {
+        margin-bottom: 0.5rem;
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .section-2-info-box-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+    .section-2-subsection2 {
+        background-color: var(--black);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        .section-2-subsection2-inner {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 1.5rem;
+            row-gap: 1rem;
+            margin-bottom: 1rem;
+            & > div {
+                display: grid;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+        }
+    }
+    .use-case-wrapper {
+        display: grid;
+        gap: 1.5rem;
+        .use-case-contact {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            h3 {
+                margin-bottom: 0.75rem;
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .home-section-1 {
+        .section-1-header-text {
+            h2 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    
+}
+
+@media screen and (min-width: 768px) {
+    .home-section-1 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "headerText1 ."
+            "subSection1 subSection1"
+            "subSection2 subSection2"
+            "infoBox infoBox"
+            "subSection3 subSection3"
+        ;
+        gap: 1.5rem;
+        .section-1-header-text {
+            grid-area: headerText1;
+        }
+        .section-1-subsection1 {
+            grid-area: subSection1;
+            grid-template-columns: repeat(2, 1fr);
+            & > div {
+                padding: 2.5rem 0 2.5rem 2.5rem;
+            }
+        }
+        .section-1-subsection2 {
+            grid-area: subSection2;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                "headerText12 ."
+                "infoText12 infoText12"
+                "image12 image12"
+            ;
+            padding: 2.5rem 2.5rem 0;
+            row-gap: 1rem;
+            column-gap: 1.5rem;
+            h3 {
+                grid-area: headerText12;
+            }
+            & > div {
+                grid-area: infoText12;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            img {
+                grid-area: image12;
+            }
+        }
+        .section-1-info-box-wrapper {
+            grid-area: infoBox;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .section-1-subsection3 {
+            grid-area: subSection3;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+                "headerText12 ."
+                "infoText12 infoText12"
+            ;
+            padding: 2.5rem;
+            row-gap: 1rem;
+            column-gap: 1.5rem;
+            h3 {
+                grid-area: headerText12;
+            }
+            & > div {
+                grid-area: infoText12;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    }
+    .home-section-2 {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "headerText2 ."
+            "infoBox2 infoBox2"
+            "infoBox2 infoBox2"
+            "infoBox2 infoBox2"
+            "subSection4 subSection4"
+            "headerText3 ."
+            "usecase usecase"
+        ;
+        gap: 1.5rem;
+        .section-2-header-text {
+            grid-area: headerText2;
+            margin-bottom: 1.5rem;
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .section-2-info-box-wrapper {
+            grid-area: infoBox2;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .section-2-subsection2 {
+            grid-area: subSection4;
+            padding: 2.5rem;
+            .section-2-subsection2-inner {
+                grid-template-columns: repeat(3, 1fr);
+                margin-bottom: 2rem;
+            }
+        }
+        .section-2-header-text2 {
+            grid-area: headerText3;
+            margin-bottom: 1.5rem;
+            h2 {
+                margin-bottom: 1.75rem;
+            }
+        }
+        .use-case-wrapper {
+            grid-area: usecase;
+            gap: 2.5rem;
+            .use-case-contact {
+                padding: 2.5rem;
+                h3 {
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .home-section-1,
+    .home-section-2 {
+        padding: 0;
+    }
+}

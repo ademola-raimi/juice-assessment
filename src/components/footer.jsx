@@ -4,32 +4,42 @@ import SmallLogo from "../assets/img/logo-small.svg"
 
 const Footer = () => {
     return (
-        <footer className="bg-purple py-16 w-full">
-            <div className="mx-auto w-full xl:max-w-5.2xl grid grid-cols-2 space-y-4 lg:grid-cols-4 lg:space-y-0">
-                <div className="flex space-x-4 items-start">
-                    <img src={SmallLogo} alt="Juice logo" width={32} className="logo-shor" />
-                    <p className="text-sm leading-8">©2022 Juice Africa.<br/>All rights reserved.</p>
+        <footer>
+            <div className="container footer-wrapper">
+                <div className="footer-1">
+                    <img src={SmallLogo} alt="Juice logo" width={32} />
+                    <p className="roobert-regular-normal-black-14px">
+                        &copy; 2022 Juice Africa.<br/>All rights reserved.
+                    </p>
                 </div>
-                <div className="space-y-4">
-                    <h4 className="mt-0">Resources</h4>
-                    <ul className="space-y-4">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Articles</a></li>
-                        {/* <Link href="#"><li>Documentation</li></Link>
-                        <Link href="#"><li>Articles</li></Link> */}
+                <div className="footer-2">
+                    <h4 className="roobert-bold-black-long-18px">Resources</h4>
+                    <ul className="footer-links">
+                        <Link href="#">
+                            <li className="roobert-regular-normal-black-long-16px">Documentation</li>
+                        </Link>
+                        <Link href="#">
+                            <li className="roobert-regular-normal-black-long-16px">Articles</li>
+                        </Link>
                     </ul>
                 </div>
-                <div className="space-y-4">
-                    <h4 className="mt-0">Legal</h4>
+                <div className="footer-3">
+                    <h4 className="roobert-bold-black-long-18px">Legal</h4>
                     <ul className="space-y-4">
-                        <li><a href="#">Terms & conditions</a></li>
+                        <Link href="#">
+                            <li className="roobert-regular-normal-black-long-16px">Terms & conditions</li>
+                        </Link>
                     </ul>
                 </div>
-                <div className="space-y-4">
-                    <h4 className="mt-0">Company</h4>
+                <div className="footer-4">
+                    <h4 className="roobert-bold-black-long-18px">Company</h4>
                     <ul className="space-y-4">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <Link href="#">
+                            <li className="roobert-regular-normal-black-long-16px">About us</li>
+                        </Link>
+                        <Link href="#">
+                            <li className="roobert-regular-normal-black-long-16px">Contact us</li>
+                        </Link>
                     </ul>
                 </div>
             </div>

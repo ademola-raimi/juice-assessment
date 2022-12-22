@@ -1,10 +1,11 @@
 .button {
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: flex-start;
+    border-radius: var(--border-radius);
     text-align: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
     &.button-white-bg {
-        color: "var(--black)";
+        color: var(--black);
         background-color: var(--white);
         padding: 0.5rem 1.125rem;
     }
@@ -17,6 +18,16 @@
         border: 1px solid var(--black);
         background: transparent;
         padding: 0.5rem 1.125rem;
+    }
+    &.button-arrow {
+        background: var(--lighter-grey);
+        color: var(--black);
+        padding: 0.5rem;
+    }
+    .button-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
 

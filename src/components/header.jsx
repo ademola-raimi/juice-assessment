@@ -7,28 +7,31 @@ const Header = () => {
 
     return (
         <div className="header header-1">
-            <Link to="/">
-                <img className="logo" src={Logo} alt="Juice Logo" />
-            </Link>
-            <div className="navbar roobert-regular-normal-black-16px">
+            <div className="header-wrapper">
                 <Link to="/">
-                    <div className="nav-item">Documentation</div>
+                    <img className="logo" src={Logo} alt="Juice Logo" />
                 </Link>
-                <Link to="/">
-                    <div className="nav-item">Benefits</div>
-                </Link>
-                <Link to="/">
-                    <div className="nav-item">Use cases</div>
-                </Link>
-                <Link to="/">
-                    <div className="nav-item">Guidance</div>
+                <div className="navbar roobert-regular-normal-black-16px">
+                    <Link to="/">
+                        <div className="nav-item">Documentation</div>
+                    </Link>
+                    <Link to="/">
+                        <div className="nav-item">Benefits</div>
+                    </Link>
+                    <Link to="/">
+                        <div className="nav-item">Use cases</div>
+                    </Link>
+                    <Link to="/">
+                        <div className="nav-item">Guidance</div>
+                    </Link>
+                </div>
+                <Link to="/contact-us">
+                    <Button className="button-outline">
+                        Contact Us
+                    </Button>
                 </Link>
             </div>
-            <Link to="/contact-us">
-                <Button className="button-outline">
-                    Contact Us
-                </Button>
-            </Link>
+            
         </div>
     );
 }

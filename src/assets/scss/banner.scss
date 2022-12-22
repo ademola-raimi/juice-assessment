@@ -1,0 +1,90 @@
+.banner-bg {
+    background: url("../img/banner-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 39rem;
+    .banner-wrapper {
+        padding: 9.75rem 1.5rem 0;
+        text-align: center;
+        .banner-main {
+            width: 100%;
+            margin-bottom: 2rem;
+            h1 {
+                margin-bottom: 1rem;
+            }
+            p {
+                margin-bottom: 2.5rem;
+            }
+            .banner-contact {
+                padding: 1rem 2.5rem;
+                font-size: 1.125rem;
+                line-height: 26px;
+            }
+        }
+        .banner-credentials {
+            width: 100%;
+            margin: 0 auto;
+            .credentials-icons {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+            }
+            p {
+                letter-spacing: 0.37px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .banner-bg {
+        .banner-wrapper {
+            .banner-main {
+                h1 {
+                    font-size: 2.5rem;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner-bg {
+        .banner-wrapper {
+            padding: 9.75rem 1.5rem 0;
+            .banner-main {
+                width: 41.25rem;
+                margin: 0 auto 4rem;
+                h1 {
+                    margin-bottom: 1.5rem;
+                }
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+            .banner-credentials {
+                width: 46.75rem;
+                margin: 0 auto;
+                .credentials-icons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner-bg {
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .banner-bg {
+        background-size: cover;
+    }
+}
