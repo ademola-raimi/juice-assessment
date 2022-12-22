@@ -276,6 +276,10 @@
   background-color: var(--light);
 }
 
+.gradient-bg {
+  background: linear-gradient(180deg, #E3FFE9 0%, #F8F8F8 100%);
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
