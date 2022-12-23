@@ -11,7 +11,7 @@ export const Button = (props) => {
             type={type}
         >
             {link ? (
-                <Link to={link} target="_blank" rel="noopener noreferrer">
+                <Link to={link}>
                     {children}
                 </Link>
             ) : (

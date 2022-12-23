@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Layout from '../components/Layout';
 import UseCase from '../components/UseCase';
 import GoToTop from '../components/GotToTop';
@@ -19,6 +19,11 @@ export const ContactUs = () => {
     const messageRef = useRef(null);
     const [error, setError] = useState("");
     const [showNotif, setShowNotif] = useState(false);
+
+    useEffect(() => {
+        scroll.scrollToTop();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -125,12 +130,13 @@ export const ContactUs = () => {
                         <h3 className="roobert-bold-black-28px">Not sure if you're a good match?</h3>
                         <p className="roobert-regular-normal-black-18px">
                         Want us to take a closer look at your idea and how you can utilize our products? Let's discuss in detail.</p>
-                        <Button
-                            className="button-black-bg"
-                            link="/contact-us"
-                        >
-                            Contact us
-                        </Button>
+                        <div onClick={() => scroll.scrollToTop()}>
+                            <Button
+                                className="button-black-bg"
+                            >
+                                Contact us
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
