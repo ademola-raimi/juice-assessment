@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { ArticleComponent } from '../components/ArticleComponent';
 import Layout from '../components/Layout';
 import ArticleSmallImage from "../assets/img/article-small.png";
 import { Button } from '../components/Button';
+import GoToTop from '../components/GotToTop';
 
 export const Articles = () => {
+    const topRef = useRef(null)
     return (
         <Layout className="bg-light">
-            <div className="container articles-wrapper">
+            <div ref={topRef} className="container articles-wrapper">
                 <div className="articles-top-section">
                     <div className="articles-header">
                         <h1 className="animate__animated animate__bounce roobert-bold-black-56px">Articles</h1>
@@ -66,6 +68,7 @@ export const Articles = () => {
                     />
                 </div>
             </div>
+            <GoToTop displayAfter={200} target={topRef} />
         </Layout>
     );
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Banner from '../components/Banner';
 import InfoBox from '../components/InfoBox';
 import Layout from '../components/Layout';
 import InfoBanner from '../components/InfoBanner';
 import UseCase from '../components/UseCase';
+import GoToTop from '../components/GotToTop';
 
 import HeartCaution from "../assets/img/heart-caution.svg";
 import HandMoney from "../assets/img/hand-money.svg";
@@ -20,9 +21,14 @@ import Home14 from "../assets/img/home14.png";
 import { Button, ButtonIcon } from "../components/Button";
 
 function Home() {
+  const topRef = useRef(null);
+
+  console.log(topRef);
   return (
     <Layout className="light-bg">
-      <Banner />
+      <div ref={topRef}>
+        <Banner />
+      </div>
       <div className="container home-section-1">
         <div className="section-1-header-text">
           <h2 className="roobert-bold-black-40px">Accept and process payments in a secure and scalable way</h2>
@@ -205,6 +211,7 @@ function Home() {
             Contact us
         </Button>
       </InfoBanner>
+      <GoToTop displayAfter={200} target={topRef} />
     </Layout>
   );
 }

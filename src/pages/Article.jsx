@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../components/Layout';
+import GoToTop from '../components/GotToTop';
 
 import ArticleSmallImage from "../assets/img/article-small.png";
 import ArticleBigImage from "../assets/img/article-big.png";
-// import { ArticleFullWidth } from '../components/ArticleComponent';
+
 
 export const Article = () => {
+    const topRef = useRef(null)
     return (
         <Layout className="light-bg">
-            <div className="container article-wrapper">
+            <div ref={topRef} className="container article-wrapper">
                 <div className="article-intro-banner">
                     <div>
                         <h1 className="roobert-bold-black-56px">
@@ -123,6 +125,7 @@ export const Article = () => {
                     </p>
                 </div>
             </div>
+            <GoToTop displayAfter={200} target={topRef} />
         </Layout>
     );
 }

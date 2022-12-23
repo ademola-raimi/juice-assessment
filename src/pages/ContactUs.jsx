@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../components/Layout';
 import UseCase from '../components/UseCase';
+import GoToTop from '../components/GotToTop';
 import { Button } from '../components/Button';
 import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";
@@ -8,12 +9,13 @@ import GithubLogo from "../assets/img/carbon_logo-github.svg";
 import VmWareLogo from "../assets/img/carbon_logo-vmware.svg";
 
 export const ContactUs = () => {
+    const topRef = useRef(null);
     const handleFormSubmit = (e) => {
         e.preventDefault();
     }
     return (
         <Layout className="gradient-bg">
-            <div className="container contact-us-wrapper">
+            <div ref={topRef} className="container contact-us-wrapper">
                 <div className="contact-form-section">
                     <div className="contact-info-section">
                         <h1 className="animate__animated animate__bounce roobert-bold-black-56px">How can we help?</h1>
@@ -74,6 +76,7 @@ export const ContactUs = () => {
                     </div>
                 </div>
             </div>
+            <GoToTop displayAfter={200} target={topRef} />
         </Layout>
     );
 }

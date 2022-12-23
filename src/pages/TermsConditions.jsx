@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../components/Layout';
+import GoToTop from '../components/GotToTop';
 
 export const TermsConditions = () => {
+    const topRef = useRef(null);
     return (
         <Layout>
-            <div className="container terms-wrapper">
+            <div ref={topRef} className="container terms-wrapper">
                 <h1 className="animate__animated animate__bounce roobert-bold-black-56px">Terms & conditions</h1>
                 <div className="terms-texts">
                     <p className="roobert-regular-normal-black-18px">
@@ -213,6 +215,7 @@ export const TermsConditions = () => {
                     </p>
             </div>
             </div>
+            <GoToTop displayAfter={200} target={topRef} />
         </Layout>
     );
 }

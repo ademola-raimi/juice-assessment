@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Layout from '../components/Layout';
 import InfoBox from '../components/InfoBox';
 import InfoBanner from '../components/InfoBanner';
 import TeamComponent from '../components/TeamComponent';
 import { Button } from "../components/Button";
+import GoToTop from '../components/GotToTop';
 
 import IntroImage from "../assets/img/about-intro-image.png";
 import NetflixBubbles from "../assets/img/netflix-bubbles.png";
@@ -14,9 +15,10 @@ import Home14 from "../assets/img/home14.png";
 
 
 export const AboutUs = () => {
+    const topRef = useRef(null);
     return (
         <Layout className="light-bg">
-            <div className="container about-us-wrapper">
+            <div ref={topRef} className="container about-us-wrapper">
                 <div className="about-intro-banner">
                     <div>
                         <h1 className="roobert-bold-black-56px">About us</h1>
@@ -141,6 +143,7 @@ export const AboutUs = () => {
                     Contact us
                 </Button>
             </InfoBanner>
+            <GoToTop displayAfter={200} target={topRef} />
         </Layout>
     );
 }
