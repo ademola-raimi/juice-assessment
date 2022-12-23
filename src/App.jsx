@@ -1,11 +1,12 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 import TermsConditions from "./pages/TermsConditions";
-import Home from "./pages/Home";
-import ContactUs from "./pages/ContactUs";
-import Articles from "./pages/Articles";
-import Article from "./pages/Article";
-import AboutUs from "./pages/AboutUs";
+
+const ContactUs = lazy(() => import("./pages/ContactUs"));
+const Articles = lazy(() => import("./pages/Articles"));
+const Article = lazy(() => import("./pages/Article"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const Home = lazy(() => import("./pages/Home"));
 
 function App() {
   return (
