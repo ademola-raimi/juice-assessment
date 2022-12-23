@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const ArticleComponent = (props) => {
     const { link, image, title, tags} = props;
     return (
-        <div className="animate__animated animate__heartBeat single-article-component">
+        <div className="animate__animated animate__bounce single-article-component">
             <Link to={link}>
                 <img src={image} alt={title} />
             </Link>
