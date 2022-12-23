@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from "../assets/img/logo.svg";
-import { Link } from "react-scroll";
+import { Link, scroller } from "react-scroll";
+import { useNavigate, useLocation } from "react-router-dom"; 
 import { Button } from "./Button";
 import Cancel from "../assets/img/cancel.svg";
 import Hamburger from "../assets/img/hamburger-menu.svg";
@@ -9,6 +10,27 @@ import "../assets/scss/header.scss";
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     const [active, setActive] = useState("");
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log('location: ', location);
+        if (location.state) {
+            scrollTarget(location.state.target);
+            setActive(location.state.menu);
+        }
+    }, [location]);
+
+    const scrollTarget = (target) => scroller.scrollTo(target, {smooth: true, duration: 500, offset: -70});
+
+    const scrollToPage = (target, menu) => {
+        if (location.pathname !=='/') {
+            navigate('/', {state: {target, menu}});
+        }
+        setActive(menu)
+        scrollTarget(target);
+        
+    };
 
     const handleNavToggle = () => {
         setToggle(!toggle);
@@ -22,101 +44,57 @@ const Header = () => {
                 </a>
                 <div onClick={handleNavToggle} className="hamburger animate__animated animate__fadeInRight"><img src={Hamburger} alt="hamburger menu" /></div>
                 <div className="navbar roobert-regular-normal-black-16px">
-                    <Link
-                        activeClass={active === "doc" ? "active" : ""}
-                        to="section1"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={() => setActive("doc")}
+                    <div
+                        className={active === "doc" ? "active" : ""}
+                        onClick={() => scrollToPage('section1', 'doc')}
                     >
                         <div className="nav-item">Documentation</div>
-                    </Link>
-                    <Link
-                        activeClass={active === "ben" ? "active" : ""}
-                        to="section2"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={() => setActive("ben")}
+                    </div>
+                    <div
+                        className={active === "ben" ? "active" : ""}
+                        onClick={() => scrollToPage('section2', 'ben')}
                     >
                         <div className="nav-item">Benefits</div>
-                    </Link>
-                    <Link
-                        activeClass={active === "case" ? "active" : ""}
-                        to="section3"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={() => setActive("case")}
+                    </div>
+                    <div
+                        className={active === "case" ? "active" : ""}
+                        onClick={() => scrollToPage('section3', 'case')}
                     >
                         <div className="nav-item">Use cases</div>
-                    </Link>
-                    <Link
-                        activeClass={active === "gui" ? "active" : ""}
-                        to="section4"
-                        spy={true}
-                        smooth={true}
-                        offset={-70}
-                        duration={500}
-                        onClick={() => setActive("gui")}
+                    </div>
+                    <div
+                        className={active === "gui" ? "active" : ""}
+                        onClick={() => scrollToPage('section4', 'gui')}
                     >
                         <div className="nav-item">Guidance</div>
-                    </Link>
+                    </div>
                 </div>
                 {toggle && (
                     <div className='navbar-mobile'>
-                        <Link 
-                            className="link animate__animated animate__fadeInRight"
-                            activeClass={active === "doc" ? "active" : ""}
-                            to="section1"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={() => setActive("doc")}
+                        <div
+                            className={active === "doc" ? "active" : ""}
+                            onClick={() => scrollToPage('section1', 'doc')}
                         >
                             Documentation
-                        </Link>
-                        <Link 
-                            className="link animate__animated animate__fadeInRight"
-                            activeClass={active === "ben" ? "active" : ""}
-                            to="section2"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={() => setActive("ben")}
+                        </div>
+                        <div
+                            className={active === "ben" ? "active" : ""}
+                            onClick={() => scrollToPage('section2', 'ben')}
                         >
                             Benefits
-                        </Link>
-                        <Link
-                            className="link animate__animated animate__fadeInRight"
-                            activeClass={active === "case" ? "active" : ""}
-                            to="section3"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={() => setActive("case")}
+                        </div>
+                        <div
+                            className={active === "case" ? "active" : ""}
+                            onClick={() => scrollToPage('section3', 'case')}
                         >
-                        Use cases
-                        </Link>
-                        <Link
-                            className="link animate__animated animate__fadeInRight"
-                            activeClass={active === "gui" ? "active" : ""}
-                            to="section4"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={() => setActive("gui")}
+                            Use cases
+                        </div>
+                        <div
+                            className={active === "doc" ? "active" : ""}
+                            onClick={() => scrollToPage('section4', 'gui')}
                         >
                             Guidance
-                        </Link>
+                        </div>
                         <div onClick={handleNavToggle} className="cancel animate__animated animate__fadeInRight"><img src={Cancel} alt="cancel" /></div>
 
                         <a className='contact-us' href="/contact-us">
