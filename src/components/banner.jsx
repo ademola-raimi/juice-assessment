@@ -14,10 +14,13 @@ const Banner = () => {
             <div className="banner-wrapper">
                 <div className="banner-main">
                     <h1 className="roobert-bold-black-56px">Everything you need for reliable global payments</h1>
-                    <p className="roobert-regular-normal-black-18px">Juice is an ecosystem of services making business cross border payment less complex, more reliable and compliant than ever before.</p>
-                    
+                    <p className="roobert-regular-normal-black-18px">
+                        Juice is an ecosystem of services making business cross border payment less complex, more reliable and compliant than ever before.
+                    </p>
                     <Link to="/contact-us">
-                        <Button className="button-black-bg banner-contact">
+                        <Button
+                            className="button-black-bg banner-contact"
+                        >
                             Contact Us
                         </Button>
                     </Link>

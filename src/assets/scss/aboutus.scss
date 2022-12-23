@@ -1,0 +1,197 @@
+.about-us-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 11.25rem 1.5rem 0;
+    margin-bottom: 2rem;
+    .about-intro-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 1.5rem;
+        gap: 1.5rem;
+        h1 {
+            margin-bottom: 0.75rem;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .about-header-text {
+        margin-bottom: 0.5rem;
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .about-subsection {
+        display: grid;
+        gap: 1.5rem;
+        .about-subsection1 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(20px);
+            align-items: center;
+            & > div {
+                padding: 1.5rem;
+            }
+            h3 {
+                margin-bottom: 1rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .about-subsection2 {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+        }
+    }
+}
+
+.team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    .team-header-text {
+        margin-bottom: 0.5rem;
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .team-section {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        .team-department {
+            display: grid;
+            gap: 1.5rem;
+            .team-members {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    }
+    .team-section2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        .team-department {
+            display: grid;
+            gap: 1.5rem;
+            .team-members {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .about-us-wrapper {
+        .about-header-text {
+            h2 {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-us-wrapper {
+        margin-bottom: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "introbanner introbanner"
+            "titletext ."
+            "moreabout moreabout"
+        ;
+        gap: 1.5rem;
+        .about-intro-banner {
+            grid-area: introbanner;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 3rem;
+            gap: 1.5rem;
+            h1 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .about-header-text {
+            grid-area: titletext;
+            margin-bottom: 1rem;
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .about-subsection {
+            grid-area: moreabout;
+            .about-subsection1 {
+                grid-template-columns: repeat(2, 1fr);
+                & > div {
+                    padding: 2.5rem 0 2.5rem 2.5rem;
+                }
+            }
+            .about-subsection2 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    .team-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "teamtitletext ."
+            "departmentcontent departmentcontent"
+            "departmentcontent2 departmentcontent2"
+        ;
+        row-gap: 2.5rem;
+        column-gap: 1.5rem;
+        .team-header-text {
+            grid-area: teamtitletext;
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .team-section {
+            grid-area: departmentcontent;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "department department"
+                // "members members"
+            ;
+            .team-department {
+                grid-area: department;
+                .team-members {
+                    // grid-area: members;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+        .team-section2 {
+            grid-area: departmentcontent2;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "department2 department2"
+                // "members2 members2"
+            ;
+            .team-department {
+                grid-area: department2;
+                .team-members {
+                    // grid-area: members2;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-us-wrapper {
+      padding: 11.25rem 0 0;
+    }
+}

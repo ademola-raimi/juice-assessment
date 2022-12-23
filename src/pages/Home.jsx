@@ -90,9 +90,9 @@ function Home() {
                 End-to-end data security
             </li>
         </ul>
-        <ButtonIcon 
-            className="button-white-bg"
-            link="https://docs.spendjuice.org/docs"
+        <ButtonIcon
+          className="button-white-bg"
+          link={{ pathname: "https://docs.spendjuice.org/docs" }}
         >
             <span className="text-underline">Documentation</span>
         </ButtonIcon>

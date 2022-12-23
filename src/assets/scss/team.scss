@@ -1,0 +1,29 @@
+.team-component {
+    border-radius: var(--border-radius);
+    .team-image {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+        width: 100%;
+    }
+    .team-info {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        background-color: var(--white);
+        padding: 1rem;
+        .team-name {
+            margin-bottom: 0.5rem;
+        }
+        .social {
+            margin-top: 1rem;
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team-info {
+        background-color: var(--white);
+        padding: 2.5rem;
+    }
+}

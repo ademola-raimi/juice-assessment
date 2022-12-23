@@ -10,7 +10,7 @@ export const Button = (props) => {
             type={type}
         >
             {link ? (
-                <Link href={link} target="_blank" rel="noopener noreferrer" className="button-icon">
+                <Link to={link} target="_blank" rel="noopener noreferrer" className="button-icon">
                     {children}
                 </Link>
             ) : (
@@ -26,7 +26,7 @@ export const ButtonIcon = (props) => {
     const { className, link, children } = props;
     return (
         <button className={`button roobert-bold-black-18px ${className || ""}`}>
-            <Link href={link} target="_blank" rel="noopener noreferrer" className="button-icon">
+            <Link to={link} target="_blank" rel="noopener noreferrer" className="button-icon">
                 {children}
                 <img className="union" src={ExternalIcon} alt="external-link" />
             </Link>

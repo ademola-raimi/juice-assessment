@@ -1,14 +1,17 @@
 @import './globals.scss';
 @import '../src/assets/scss/articles.scss';
-@import '../src/assets/scss/button.scss';
 @import '../src/assets/scss/banner.scss';
-@import '../src/assets/scss/header.scss';
+@import '../src/assets/scss/button.scss';
 @import '../src/assets/scss/footer.scss';
+@import '../src/assets/scss/header.scss';
 @import '../src/assets/scss/infobox.scss';
 @import '../src/assets/scss/infobanner.scss';
+@import '../src/assets/scss/team.scss';
 @import '../src/assets/scss/usecase.scss';
-@import '../src/assets/scss/home.scss';
+
+@import '../src/assets/scss/aboutus.scss';
 @import '../src/assets/scss/contactus.scss';
+@import '../src/assets/scss/home.scss';
 
 * {
   box-sizing: border-box;

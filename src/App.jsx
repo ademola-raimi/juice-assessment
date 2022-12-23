@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import Articles from "./pages/Articles";
 import Article from "./pages/Article";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -14,6 +15,12 @@ function App() {
           path="/"
           element={
               <Home />
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+              <AboutUs />
           }
         />
         <Route

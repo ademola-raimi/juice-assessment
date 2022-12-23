@@ -13,6 +13,101 @@
         text-transform: uppercase;
     }
 }
+
+.article-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 11.25rem 1.5rem 0;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+    .article-intro-banner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 1.25rem;
+        gap: 1.5rem;
+        h1 {
+            margin-bottom: 0.75rem;
+        }
+        img {
+            width: 100%;
+            align-self: end;
+            display: flex;
+        }
+    }
+    .article-header-text {
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+    }
+}
+
+.article-emphasized {
+    background-color: var(--emphasis);
+    .article-emphasized-wrapper {
+        padding: 2rem 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+        .article-emphasized-title h2,
+        .article-emphasized-subtitle h3,
+        .article-emphasized-content1 h3,
+        .article-emphasized-content2 h3 {
+            margin-bottom: 0.75rem;
+        }
+        .article-emphasized-content2 {
+            h3 {
+                margin-bottom: 0.75rem;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.article-wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.article-full-width {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
+    .article-header-text {
+        h2 {
+            margin-bottom: 0.75rem;
+        }
+    }
+    .article-media {
+        img {
+            border-radius: var(--border-radius);
+            width: 100%;
+        }
+        p {
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.article-media-alone {
+    img {
+        border-radius: var(--border-radius);
+        width: 100%;
+    }
+    p {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
 .articles-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -53,6 +148,93 @@
             margin-top: 1.5rem;
         }
     }
+    .article-wrapper {
+        margin-bottom: 3rem;
+        gap: 2.5rem;
+        .article-intro-banner {
+            // grid-area: introbanner;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 2.5rem;
+            h1 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .article-header-text {
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    .article-emphasized {
+        .article-emphasized-wrapper {
+            padding: 4rem 0;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "halfcontent ."
+                "halfcontent2 ."
+                "moreabout moreabout"
+                "moreabout2 moreabout2"
+            ;
+            gap: 2.5rem;
+            .article-emphasized-title {
+                grid-area: halfcontent;
+            }
+            .article-emphasized-subtitle {
+                grid-area: halfcontent2;
+            }
+            .article-emphasized-content1 {
+                grid-area: moreabout;
+            }
+            .article-emphasized-content2 {
+                grid-area: moreabout2;
+            }
+            .article-emphasized-title h2,
+            .article-emphasized-subtitle h3,
+            .article-emphasized-content1 h3,
+            .article-emphasized-content2 h3 {
+                margin-bottom: 1.5rem;
+            }
+            h2, h3 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    .article-wrapper2 {
+        padding: 4rem 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .article-full-width {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "articletitle ."
+            "media media"
+            "desc desc"
+        ;
+        gap: 2.5rem;
+        & > div {
+            grid-area: articletitle;
+        }
+        .article-header-text {
+            h2 {
+                margin-bottom: 1.5rem;
+            }
+        }
+        .article-media {
+            grid-area: media;
+            p {
+                margin-top: 1.5rem;
+            }
+        }
+        p {
+            grid-area: desc;
+        }
+    }
+    .article-media-alone {
+        p {
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+    }
     .articles-wrapper {
       margin-bottom: 4rem;
       grid-template-columns: repeat(2, 1fr);
@@ -84,7 +266,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .articles-wrapper {
+    .articles-wrapper,
+    .article-wrapper {
       padding: 11.25rem 0 0;
     }
-  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleComponent from '../components/ArticleComponent';
+import { ArticleComponent } from '../components/ArticleComponent';
 import Layout from '../components/Layout';
 import ArticleSmallImage from "../assets/img/article-small.png";
 import { Button } from '../components/Button';
