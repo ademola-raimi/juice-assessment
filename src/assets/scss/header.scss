@@ -54,7 +54,7 @@
     display: none;
     @media screen and (max-width: 768px)  {
         position: fixed;
-        top: 5%;
+        // top: 5%;
         right: 3%;
         color: #222;
         background: transparent;
@@ -108,7 +108,7 @@
         }
         .cancel {
             position: fixed;
-            top: 16%;
+            // top: 16%;
             right: 3%;
             background: #222;
             color: var(--white);
