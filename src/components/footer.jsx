@@ -15,10 +15,10 @@ const Footer = () => {
                 <div className="footer-2">
                     <h4 className="roobert-bold-black-long-18px">Resources</h4>
                     <ul className="footer-links">
-                        <Link href="https://docs.spendjuice.org/docs" target="_blank">
+                        <Link to="https://docs.spendjuice.org/docs" target="_blank">
                             <li className="roobert-regular-normal-black-long-16px">Documentation</li>
                         </Link>
-                        <Link href="/articles">
+                        <Link to="/articles">
                             <li className="roobert-regular-normal-black-long-16px">Articles</li>
                         </Link>
                     </ul>
@@ -26,7 +26,7 @@ const Footer = () => {
                 <div className="footer-3">
                     <h4 className="roobert-bold-black-long-18px">Legal</h4>
                     <ul className="space-y-4">
-                        <Link href="#">
+                        <Link to="/terms-conditions">
                             <li className="roobert-regular-normal-black-long-16px">Terms & conditions</li>
                         </Link>
                     </ul>
@@ -34,10 +34,10 @@ const Footer = () => {
                 <div className="footer-4">
                     <h4 className="roobert-bold-black-long-18px">Company</h4>
                     <ul className="space-y-4">
-                        <Link href="#">
+                        <Link to="about-us">
                             <li className="roobert-regular-normal-black-long-16px">About us</li>
                         </Link>
-                        <Link href="#">
+                        <Link to="/contact-us">
                             <li className="roobert-regular-normal-black-long-16px">Contact us</li>
                         </Link>
                     </ul>

@@ -5,7 +5,7 @@ export const TermsConditions = () => {
     return (
         <Layout>
             <div className="container terms-wrapper">
-                <h1 className="roobert-bold-black-56px">Terms & conditions</h1>
+                <h1 className="animate__animated animate__bounce roobert-bold-black-56px">Terms & conditions</h1>
                 <div className="terms-texts">
                     <p className="roobert-regular-normal-black-18px">
                         Please read these Terms of Service (“Terms”), which set forth the legally binding terms and conditions between you and Juiice Inc (‘the Company’ or ‘Juice Track’ or ‘we’ ‘our’ or ‘us’). It governs your access to and the use of Juice Track’s website, mobile application and the services provided by Juice. 

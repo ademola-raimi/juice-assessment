@@ -10,7 +10,7 @@ export const Articles = () => {
             <div className="container articles-wrapper">
                 <div className="articles-top-section">
                     <div className="articles-header">
-                        <h1 className="roobert-bold-black-56px">Articles</h1>
+                        <h1 className="animate__animated animate__bounce roobert-bold-black-56px">Articles</h1>
                         <p className="roobert-regular-normal-black-18px">Making a general inquiry, or you'll like us to talk in detail? Tell us what you need and we will get back to you as soon as possible.</p>
                     </div>
                     <div className="articles-filter">
