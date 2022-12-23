@@ -1,11 +1,58 @@
+.single-article-component {
+    img {
+        border-radius: var(--border-radius);
+        width: 100%;
+        cursor: pointer;
+    }
+    h4 {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+    p {
+        text-transform: uppercase;
+    }
+}
 .articles-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 11.25rem 1.5rem 0;
     margin-bottom: 2rem;
+    .articles-top-section {
+        margin-bottom: 0.5rem;
+        .articles-header {
+            margin-bottom: 1.5rem;
+            h1 {
+                margin-bottom: 1rem;
+            }
+        }
+        .articles-filter {
+            p {
+                margin-bottom: 1rem;
+            }
+            .articles-categories {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+                .category-button {
+                    padding: 0.625rem 1rem;
+                }
+            }
+        }
+    }
+    .articles-list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .single-article-component {
+        h4 {
+            margin-top: 1.5rem;
+        }
+    }
     .articles-wrapper {
       margin-bottom: 4rem;
       grid-template-columns: repeat(2, 1fr);
@@ -14,5 +61,30 @@
         "article article"
       ;
       gap: 1.5rem;
+        .articles-top-section {
+            margin-bottom: 1rem;
+            .articles-header {
+                margin-bottom: 2.5rem;
+                h1 {
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .articles-filter {
+                p {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .articles-list {
+            grid-area: article;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .articles-wrapper {
+      padding: 11.25rem 0 0;
+    }
+  }

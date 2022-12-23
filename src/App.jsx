@@ -4,34 +4,41 @@ import TermsConditions from "./pages/TermsConditions";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import Articles from "./pages/Articles";
+import Article from "./pages/Article";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route
-            path="/"
-            element={
-                <Home />
-            }
+          path="/"
+          element={
+              <Home />
+          }
         />
         <Route
-            path="/contact-us"
-            element={
-                <ContactUs />
-            }
+          path="/contact-us"
+          element={
+              <ContactUs />
+          }
         />
         <Route
-            path="/terms-conditions"
-            element={
-                <TermsConditions />
-            }
+          path="/terms-conditions"
+          element={
+              <TermsConditions />
+          }
         />
         <Route
-            path="/articles"
-            element={
-                <Articles />
-            }
+          path="/article"
+          element={
+              <Article />
+          }
+        /> 
+        <Route
+          path="/articles"
+          element={
+              <Articles />
+          }
         />      
       </Routes>
     </Router>
