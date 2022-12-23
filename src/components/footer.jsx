@@ -15,10 +15,10 @@ const Footer = () => {
                 <div className="footer-2">
                     <h4 className="roobert-bold-black-long-18px">Resources</h4>
                     <ul className="footer-links">
-                        <Link href="#">
+                        <Link href="https://docs.spendjuice.org/docs" target="_blank">
                             <li className="roobert-regular-normal-black-long-16px">Documentation</li>
                         </Link>
-                        <Link href="#">
+                        <Link href="/articles">
                             <li className="roobert-regular-normal-black-long-16px">Articles</li>
                         </Link>
                     </ul>
