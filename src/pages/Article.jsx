@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import SimpleImageSlider from "react-simple-image-slider";
 
 import Layout from '../components/Layout';
@@ -7,8 +7,6 @@ import '../assets/scss/articles.scss';
 
 import ArticleSmallImage from "../assets/img/article-small.png";
 import ArticleBigImage from "../assets/img/article-big.png";
-// import LeftArrow from "../assets/img/left-arrow-bg.svg";
-// import RightArrow from "../assets/img/right-arrow-bg.svg";
 
 
 export const Article = () => {
@@ -86,7 +84,6 @@ export const Article = () => {
                             Section subtitle goes here
                         </h3>
                         <div className="article-media-alone">
-                            {/* <img src={ArticleBigImage} alt="article title" /> */}
                             <SimpleImageSlider
                                 width={800}
                                 height={466}
@@ -94,15 +91,6 @@ export const Article = () => {
                                 showBullets={true}
                                 showNavs={true}
                             />
-                            {/* <div className="nav-slider">
-                                <div className="left-arrow">
-                                    <img src={LeftArrow} alt="left-arrow" />
-                                </div>
-                                <div className="right-arrow" onClick={handleUpdateIndex}>
-                                    <img src={RightArrow} alt="left-arrow" />
-                                </div>
-                            </div> */}
-
                             <p className="roobert-regular-normal-grey-12px">
                                 Here comes the image description. It's optional but it may be good to use it anyway.
                             </p>
