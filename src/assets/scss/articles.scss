@@ -63,7 +63,7 @@
             h3 {
                 margin-bottom: 0.75rem;
             }
-            img {
+            & > img {
                 width: 100%;
             }
         }
@@ -101,7 +101,8 @@
 }
 
 .article-media-alone {
-    img {
+    position: relative;
+    & > img {
         border-radius: var(--border-radius);
         width: 100%;
     }
@@ -110,6 +111,20 @@
         text-align: center;
         margin-top: 1rem;
         margin-bottom: 1.25rem;
+    }
+    & > div:first-child {
+        width: 100% !important;
+        max-width: 300px;
+        background-color: unset !important;
+        border-radius: var(--border-radius);
+        & > div:first-child {
+            width: 100% !important;
+            max-width: 300px;
+            border-radius: var(--border-radius);
+        }
+    }
+    .nav-slider {
+        display: none;
     }
 }
 
@@ -147,6 +162,85 @@
     }
 }
 
+@media screen and (max-width: 1023px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 900px;
+            margin: 0 auto !important;
+            & > div:first-child {
+                max-width: 900px;
+                margin: 0 auto !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 948px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 800px;
+            & > div:first-child {
+                max-width: 800px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 848px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 700px;
+            & > div:first-child {
+                max-width: 700px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 748px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 600px;
+            & > div:first-child {
+                max-width: 600px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 500px;
+            & > div:first-child {
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 548px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 400px;
+            & > div:first-child {
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 448px) {
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 300px;
+            & > div:first-child {
+                max-width: 300px;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     .single-article-component {
         h4 {
@@ -172,7 +266,6 @@
     }
     .article-emphasized {
         .article-emphasized-wrapper {
-            padding: 4rem 0;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
                 "halfcontent ."
@@ -205,7 +298,6 @@
         }
     }
     .article-wrapper2 {
-        padding: 4rem 0;
         grid-template-columns: repeat(1, 1fr);
     }
     .article-full-width {
@@ -216,7 +308,7 @@
             "desc desc"
         ;
         gap: 2.5rem;
-        & > div {
+        & > div:first-child {
             grid-area: articletitle;
         }
         .article-header-text {
@@ -275,4 +367,54 @@
     .article-wrapper {
       padding: 11.25rem 0 0;
     }
+    .article-emphasized {
+        .article-emphasized-wrapper {
+            padding: 4rem 0;
+        }
+    }
+    .article-media-alone {
+        & > div:first-child {
+            max-width: 62.625rem;
+            & > div:first-child {
+                max-width: 62.625rem;
+            }
+        }
+    }
+    .article-wrapper2 {
+        padding: 4rem 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .article-media-alone {
+        & > div:first-child {
+            & > div:first-child {
+                & > button:first-child {
+                    display: none;
+                }
+            }
+        }
+        .nav-slider {
+            display: block;
+            .left-arrow {
+                position: absolute;
+                top: 42%;
+                left: -6%;
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+            .right-arrow {
+                position: absolute;
+                top: 42%;
+                right: -6%;
+                img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+            }
+        }
+    }
+    
 }

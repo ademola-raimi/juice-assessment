@@ -214,7 +214,7 @@ export const TermsConditions = () => {
                         If you have any questions about these Terms, please contact us at info@Juicetrack.org. 
                         This document was last updated on 1st June, 2022.
                     </p>
-            </div>
+                </div>
             </div>
             <GoToTop displayAfter={200} target={topRef} />
         </Layout>
