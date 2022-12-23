@@ -27,6 +27,7 @@
 
 :root { 
   --black: #111111;
+  --dark: #000000;
   --grey: #434343;
   --light: #f8f8f8;
   --lighter-grey: #eeeeee;
@@ -71,6 +72,15 @@
   line-height: var(--line-height-s);
 }
 
+.roobert-regular-normal-dark-16px {
+  color: var(--dark);
+  font-family: var(--font-family-roobert-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--line-height-s);
+}
+
 .roobert-regular-normal-black-long-16px {
   color: var(--black);
   font-family: var(--font-family-roobert-regular);
@@ -78,6 +88,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: var(--line-height-mm);
+}
+.roobert-bold-black-short-18px {
+  color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--line-height-xxs);
 }
 
 .roobert-bold-black-18px {
@@ -145,6 +163,15 @@
 
 .roobert-bold-black-24px {
   color: var(--black);
+  font-family: var(--font-family-roobert-bold);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--line-height-mmm);
+}
+
+.roobert-bold-dark-24px {
+  color: var(--dark);
   font-family: var(--font-family-roobert-bold);
   font-size: var(--font-size-l);
   font-style: normal;
@@ -317,20 +344,3 @@
 .text-uppercase {
   text-transform: uppercase;
 }
-
-// @media screen and (min-width: 640px) {
-//   .container {
-//     max-width: 100%;
-//   }
-// }
-// @media screen and (min-width: 768px) {
-//   .container {
-//     max-width: 100%;
-//   }
-// }
-// @media screen and (min-width: 1024px) {
-
-// }
-// @media screen and (min-width: 1280px) {
-
-// }

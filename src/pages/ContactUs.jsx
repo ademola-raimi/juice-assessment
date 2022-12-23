@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Layout from '../components/Layout';
 import UseCase from '../components/UseCase';
 import GoToTop from '../components/GotToTop';
+import { animateScroll as scroll } from "react-scroll";
 import { Button } from '../components/Button';
 import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";
 import GithubLogo from "../assets/img/carbon_logo-github.svg";
 import VmWareLogo from "../assets/img/carbon_logo-vmware.svg";
+import CheckMark from "../assets/img/check-mark.svg";
 import '../assets/scss/contactus.scss';
 
 export const ContactUs = () => {
@@ -15,10 +17,41 @@ export const ContactUs = () => {
     const lNameRef = useRef(null);
     const emailRef = useRef(null);
     const messageRef = useRef(null);
+    const [error, setError] = useState("");
+    const [showNotif, setShowNotif] = useState(false);
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        if (!fNameRef.current.value) {
+            setError("First name is required");
+            return
+        }
+        if (!lNameRef.current.value) {
+            setError("Last name is required");
+            return
+        }
+        if (!emailRef.current.value) {
+            setError("Email is required");
+            return
+        }
+        if (!messageRef.current.value) {
+            setError("Message is required");
+            return
+        }
+        setError("");
+        
+        setShowNotif(true);
     }
+    const handleStartOver = () => {
+        fNameRef.current.value = "";
+        lNameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
+        setError("");
+        setShowNotif(false);
+        scroll.scrollToTop();
+    }
+
     return (
         <Layout className="gradient-bg">
             <div ref={topRef} className="container contact-us-wrapper">
@@ -40,14 +73,33 @@ export const ContactUs = () => {
                     </div>
                     <div className="contact-form">
                         <form onSubmit={handleFormSubmit}>
-                            <input placeholder='First name (required)' ref={fNameRef} type="text" />
-                            <input placeholder='Last name (required)' ref={lNameRef} type="text" />
-                            <input placeholder='Company email (required)' ref={emailRef} type="text" />
-                            <textarea placeholder='Message (required)' ref={messageRef}></textarea>
+                            <input placeholder="First name (required)" ref={fNameRef} type="text" />
+                            <input placeholder="Last name (required)" ref={lNameRef} type="text" />
+                            <input placeholder="Company email (required)" ref={emailRef} type="text" />
+                            <textarea placeholder="Message (required)" ref={messageRef}></textarea>
+                            {error && <p className="roobert-regular-normal-dark-16px" >{error}</p>}
                             <input onChange={handleFormSubmit} type="Submit" value="Submit"/>
                         </form>
                     </div>
+                    
                 </div>
+                {showNotif && (
+                    <>
+                    <div className='empty'></div>
+                    <div className="notification">
+                        <img src={CheckMark} alt="check mark"/>
+                        <h1 className="roobert-bold-dark-24px">Message Sent</h1>
+                        <p className="roobert-regular-normal-dark-16px">We’ll reply as soon as we can. Usually it takes up to 24 hours.</p>
+                        <div onClick={handleStartOver}>
+                            <Button
+                                className="button-black-bg w-full py-1"
+                            >
+                                Start over
+                            </Button>
+                        </div>
+                    </div>
+                    </>
+                )}
                 <div className="contact-header-text2">
                     <h2 className="roobert-bold-black-40px">
                         Payment solutions for diverse use cases
