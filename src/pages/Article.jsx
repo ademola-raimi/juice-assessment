@@ -1,13 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+import SimpleImageSlider from "react-simple-image-slider";
+
 import Layout from '../components/Layout';
 import GoToTop from '../components/GotToTop';
+import '../assets/scss/articles.scss';
 
 import ArticleSmallImage from "../assets/img/article-small.png";
 import ArticleBigImage from "../assets/img/article-big.png";
+// import LeftArrow from "../assets/img/left-arrow-bg.svg";
+// import RightArrow from "../assets/img/right-arrow-bg.svg";
 
 
 export const Article = () => {
-    const topRef = useRef(null)
+    const topRef = useRef(null);
+    const images = [
+        { url:  ArticleSmallImage },
+        { url: ArticleSmallImage },
+        { url: ArticleSmallImage },
+        { url: ArticleSmallImage },
+    ];
+    
     return (
         <Layout className="light-bg">
             <div ref={topRef} className="container article-wrapper">
@@ -74,7 +86,23 @@ export const Article = () => {
                             Section subtitle goes here
                         </h3>
                         <div className="article-media-alone">
-                            <img src={ArticleBigImage} alt="article title" />
+                            {/* <img src={ArticleBigImage} alt="article title" /> */}
+                            <SimpleImageSlider
+                                width={800}
+                                height={466}
+                                images={images}
+                                showBullets={true}
+                                showNavs={true}
+                            />
+                            {/* <div className="nav-slider">
+                                <div className="left-arrow">
+                                    <img src={LeftArrow} alt="left-arrow" />
+                                </div>
+                                <div className="right-arrow" onClick={handleUpdateIndex}>
+                                    <img src={RightArrow} alt="left-arrow" />
+                                </div>
+                            </div> */}
+
                             <p className="roobert-regular-normal-grey-12px">
                                 Here comes the image description. It's optional but it may be good to use it anyway.
                             </p>
