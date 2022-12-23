@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import UseCase from '../components/useCase';
+import UseCase from '../components/UseCase';
 import { Button } from '../components/button';
 import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";

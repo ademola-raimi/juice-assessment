@@ -3,7 +3,7 @@ import Banner from '../components/banner';
 import InfoBox from '../components/infoBox';
 import Layout from '../components/layout';
 import InfoBanner from '../components/infoBanner';
-import UseCase from '../components/useCase';
+import UseCase from '../components/UseCase';
 
 import HeartCaution from "../assets/img/heart-caution.svg";
 import HandMoney from "../assets/img/hand-money.svg";

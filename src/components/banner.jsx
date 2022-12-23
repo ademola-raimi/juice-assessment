@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Button } from "./button";
+import { Button } from "./Button";
 
 import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";

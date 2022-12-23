@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header";
-import Footer from "../components/footer";
+import Footer from "./footer";
 
 const Layout = (props) =>  {
     const { className, children } = props;
