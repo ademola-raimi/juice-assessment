@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from "../assets/img/logo.svg";
-import { Link, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom"; 
 import { Button } from "./Button";
 import Cancel from "../assets/img/cancel.svg";
