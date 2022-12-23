@@ -15,9 +15,9 @@ const Footer = () => {
                 <div className="footer-2">
                     <h4 className="roobert-bold-black-long-18px">Resources</h4>
                     <ul className="footer-links">
-                        <Link to="https://docs.spendjuice.org/docs" target="_blank">
+                        <a href="https://docs.spendjuice.org/docs" rel="noopener noreferrer" target="_blank">
                             <li className="roobert-regular-normal-black-long-16px">Documentation</li>
-                        </Link>
+                        </a>
                         <Link to="/articles">
                             <li className="roobert-regular-normal-black-long-16px">Articles</li>
                         </Link>
@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="footer-4">
                     <h4 className="roobert-bold-black-long-18px">Company</h4>
                     <ul className="space-y-4">
-                        <Link to="about-us">
+                        <Link to="/about-us">
                             <li className="roobert-regular-normal-black-long-16px">About us</li>
                         </Link>
                         <Link to="/contact-us">
