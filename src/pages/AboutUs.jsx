@@ -11,6 +11,19 @@ import IntroImage from "../assets/img/about-intro-image.png";
 import NetflixBubbles from "../assets/img/netflix-bubbles.png";
 import HandMoney from "../assets/img/hand-money.svg";
 import TeamMember from "../assets/img/team-member.png";
+import TeamMember2 from "../assets/img/team-member2.png";
+import TeamMember3 from "../assets/img/team-member3.png";
+import TeamMember4 from "../assets/img/team-member4.png";
+import TeamMember5 from "../assets/img/team-member5.png";
+import TeamMember6 from "../assets/img/team-member6.png";
+import TeamMember7 from "../assets/img/team-member7.png";
+import TeamMember8 from "../assets/img/team-member8.png";
+import TeamMember9 from "../assets/img/team-member9.png";
+import TeamMember10 from "../assets/img/team-member10.png";
+import TeamMember11 from "../assets/img/team-member11.png";
+import TeamMember12 from "../assets/img/team-member12.png";
+import TeamMember13 from "../assets/img/team-member13.png";
+
 import SuccessIcon from "../assets/img/success.svg";
 import Home14 from "../assets/img/home14.png";
 import '../assets/scss/contactus.scss';
@@ -61,8 +74,8 @@ export const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            <div className="container team-wrapper">
-                <div className="team-header-text">
+            <div className="container team-header-text-wrapper">
+                <div>
                     <h2 className="roobert-bold-black-40px">
                         Our team
                     </h2>
@@ -70,20 +83,26 @@ export const AboutUs = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
+            </div>
+            <div className="container team-wrapper">
                 <div className="team-section">
                     <div className="team-department">
-                        <h3 className="roobert-bold-black-28px">Management</h3>
+                        <div className="team-header-text-wrapper">
+                            <div>
+                                <h3 className="roobert-bold-black-28px">Management</h3>
+                            </div>
+                        </div>
                         <div className="team-members">
                             <TeamComponent
-                                link="/"
+                                link="#"
                                 image={TeamMember}
                                 name="Ife Johnson"
                                 jobTitle="Job position title"
                                 socialUrl=""
                             />
                             <TeamComponent
-                                link="/"
-                                image={TeamMember}
+                                link="#"
+                                image={TeamMember2}
                                 name="Ife Johnson"
                                 jobTitle="Job position title"
                                 socialUrl=""
@@ -91,27 +110,113 @@ export const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="team-section2">
+                <div className="team-section">
                     <div className="team-department">
-                        <h3 className="roobert-bold-black-28px">Engineering</h3>
+                        <div className="team-header-text-wrapper">
+                            <div>
+                                <h3 className="roobert-bold-black-28px">Engineering</h3>
+                            </div>
+                        </div>
                         <div className="team-members">
                             <TeamComponent
                                 link="/"
-                                image={TeamMember}
+                                image={TeamMember3}
                                 name="Ife Johnson"
                                 jobTitle="Job position title"
                                 socialUrl=""
                             />
                             <TeamComponent
                                 link="/"
-                                image={TeamMember}
+                                image={TeamMember4}
                                 name="Ife Johnson"
                                 jobTitle="Job position title"
                                 socialUrl=""
                             />
                             <TeamComponent
                                 link="/"
-                                image={TeamMember}
+                                image={TeamMember5}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                        </div>
+                        <div className="team-members">
+                            <TeamComponent
+                                link="/"
+                                image={TeamMember6}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                            <TeamComponent
+                                link="/"
+                                image={TeamMember7}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                            <TeamComponent
+                                link="/"
+                                image={TeamMember8}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                        </div>
+                        <div className="team-members">
+                            <TeamComponent
+                                link="/"
+                                image={TeamMember9}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="team-section">
+                    <div className="team-department">
+                        <div className="team-header-text-wrapper">
+                            <div>
+                                <h3 className="roobert-bold-black-28px">Product</h3>
+                            </div>
+                        </div>
+                        <div className="team-members">
+                            <TeamComponent
+                                link="#"
+                                image={TeamMember10}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                            <TeamComponent
+                                link="#"
+                                image={TeamMember11}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                            <TeamComponent
+                                link="#"
+                                image={TeamMember12}
+                                name="Ife Johnson"
+                                jobTitle="Job position title"
+                                socialUrl=""
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="team-section">
+                    <div className="team-department">
+                        <div className="team-header-text-wrapper">
+                            <div>
+                                <h3 className="roobert-bold-black-28px">Treasury Ops</h3>
+                            </div>
+                        </div>
+                        <div className="team-members">
+                            <TeamComponent
+                                link="#"
+                                image={TeamMember13}
                                 name="Ife Johnson"
                                 jobTitle="Job position title"
                                 socialUrl=""

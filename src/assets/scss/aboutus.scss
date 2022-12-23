@@ -50,36 +50,22 @@
     }
 }
 
+.team-header-text-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    h2 {
+        margin-bottom: 0.75rem;
+    }
+}
+
 .team-wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
     padding: 2rem 1.5rem;
     margin-bottom: 2rem;
-    .team-header-text {
-        margin-bottom: 0.5rem;
-        h2 {
-            margin-bottom: 0.75rem;
-        }
-    }
     .team-section {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem;
-        .team-department {
-            display: grid;
-            gap: 1.5rem;
-            .team-members {
-                display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                gap: 1.5rem;
-            }
-        }
-    }
-    .team-section2 {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1.5rem;
         .team-department {
             display: grid;
             gap: 1.5rem;
@@ -91,6 +77,7 @@
         }
     }
 }
+
 
 @media screen and (max-width: 450px) {
     .about-us-wrapper {
@@ -144,48 +131,23 @@
             }
         }
     }
-    .team-wrapper {
+    .team-header-text-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "teamtitletext ."
-            "departmentcontent departmentcontent"
-            "departmentcontent2 departmentcontent2"
-        ;
+        gap: 1.5rem;
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .team-wrapper {
+        grid-template-rows: repeat(1, 1fr);
         row-gap: 2.5rem;
         column-gap: 1.5rem;
         margin-bottom: 4rem;
-        .team-header-text {
-            grid-area: teamtitletext;
-            h2 {
-                margin-bottom: 1.5rem;
-            }
-        }
         .team-section {
-            grid-area: departmentcontent;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas:
-                "department department"
-                // "members members"
-            ;
             .team-department {
-                grid-area: department;
+                display: grid;
+                gap: 1.5rem;
                 .team-members {
-                    // grid-area: members;
-                    grid-template-columns: repeat(3, 1fr);
-                }
-            }
-        }
-        .team-section2 {
-            grid-area: departmentcontent2;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-areas:
-                "department2 department2"
-                // "members2 members2"
-            ;
-            .team-department {
-                grid-area: department2;
-                .team-members {
-                    // grid-area: members2;
                     grid-template-columns: repeat(3, 1fr);
                 }
             }
