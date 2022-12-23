@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import UseCase from '../components/UseCase';
-import { Button } from '../components/button';
+import { Button } from '../components/Button';
 import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";
 import GithubLogo from "../assets/img/carbon_logo-github.svg";

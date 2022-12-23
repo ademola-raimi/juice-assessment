@@ -1,8 +1,8 @@
 import React from 'react';
-import Banner from '../components/banner';
-import InfoBox from '../components/infoBox';
-import Layout from '../components/layout';
-import InfoBanner from '../components/infoBanner';
+import Banner from '../components/Banner';
+import InfoBox from '../components/InfoBox';
+import Layout from '../components/Layout';
+import InfoBanner from '../components/InfoBanner';
 import UseCase from '../components/UseCase';
 
 import HeartCaution from "../assets/img/heart-caution.svg";
@@ -17,7 +17,7 @@ import SuccessIcon from "../assets/img/success.svg";
 import Home13 from "../assets/img/home13.png";
 import Home14 from "../assets/img/home14.png";
 
-import { Button, ButtonIcon } from "../components/button";
+import { Button, ButtonIcon } from "../components/Button";
 
 function Home() {
   return (
