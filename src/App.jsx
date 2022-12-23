@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { Routes, BrowserRouter as Router, Route } from "react-router-dom";
 import TermsConditions from "./pages/TermsConditions";
 
@@ -15,37 +15,49 @@ function App() {
         <Route
           path="/"
           element={
+            <Suspense>
               <Home />
+            </Suspense>
           }
         />
         <Route
           path="/about-us"
           element={
+            <Suspense>
               <AboutUs />
+            </Suspense>
           }
         />
         <Route
           path="/contact-us"
           element={
+            <Suspense>
               <ContactUs />
+            </Suspense>
           }
         />
         <Route
           path="/terms-conditions"
           element={
+            <Suspense>
               <TermsConditions />
+            </Suspense>
           }
         />
         <Route
           path="/article"
           element={
+            <Suspense>
               <Article />
+            </Suspense>
           }
         /> 
         <Route
           path="/articles"
           element={
+            <Suspense>
               <Articles />
+            </Suspense>
           }
         />      
       </Routes>

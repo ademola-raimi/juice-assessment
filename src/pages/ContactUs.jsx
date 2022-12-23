@@ -11,6 +11,11 @@ import '../assets/scss/contactus.scss';
 
 export const ContactUs = () => {
     const topRef = useRef(null);
+    const fNameRef = useRef(null);
+    const lNameRef = useRef(null);
+    const emailRef = useRef(null);
+    const messageRef = useRef(null);
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
     }
@@ -35,11 +40,11 @@ export const ContactUs = () => {
                     </div>
                     <div className="contact-form">
                         <form onSubmit={handleFormSubmit}>
-                            <input placeholder='First name (required)' type="text" />
-                            <input placeholder='Last name (required)' type="text" />
-                            <input placeholder='Company email (required)' type="text" />
-                            <textarea placeholder='Message (required)'></textarea>
-                            <input type="Submit" value="Submit"/>
+                            <input placeholder='First name (required)' ref={fNameRef} type="text" />
+                            <input placeholder='Last name (required)' ref={lNameRef} type="text" />
+                            <input placeholder='Company email (required)' ref={emailRef} type="text" />
+                            <textarea placeholder='Message (required)' ref={messageRef}></textarea>
+                            <input onChange={handleFormSubmit} type="Submit" value="Submit"/>
                         </form>
                     </div>
                 </div>
