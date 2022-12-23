@@ -27,6 +27,14 @@
     display: flex;
     align-items: flex-start;
     gap: 3rem;
+    @media screen and (max-width: 768px)  {
+        display: none
+    }
+}
+.contact-us {
+    @media screen and (max-width: 768px)  {
+        display: none
+    }
 }
   
 .nav-item {
@@ -41,7 +49,77 @@
     top: unset;
     z-index: unset;
 }
-  
+
+.hamburger {
+    display: none;
+    @media screen and (max-width: 768px)  {
+        position: fixed;
+        top: 16%;
+        right: 3%;
+        color: #222;
+        background: transparent;
+        border: 1px solid var(--grey);
+        padding: .75rem;
+        display: flex;
+        place-items: center;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+.navbar-mobile {
+    display: none;
+    @media screen and (max-width: 768px)  {
+        position: fixed;
+        right: 0;
+        height: 150vh;
+        width: 50%;
+        @media screen and (min-width: 790px) {
+            width: 60%;
+        }
+        background-color: rgba(58, 66, 81, .9);
+        z-index: 99;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .link {
+            color: var(--lighter-grey);
+            text-decoration: none;
+            margin-top: 28px;
+            font-family: "Roobert-Bold", sans-serif;
+            transition: .2s all ease-in-out;
+            user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            &:hover {
+                transition: .2s all ease-in-out;
+                color: var(--purple);
+            }
+        }
+        .contact-us {
+            display: block;
+            margin-bottom: -562px;
+            margin-top: 297px;
+            color: var(--white);
+            background-color: var(--black);
+            border-radius: var(--border-radius);
+        }
+        .cancel {
+            position: fixed;
+            top: 16%;
+            right: 3%;
+            background: #222;
+            color: var(--white);
+            padding: .75rem;
+            display: flex;
+            place-items: center;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
 
 @media screen and (min-width: 640px) {
     .header {

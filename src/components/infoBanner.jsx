@@ -1,8 +1,8 @@
 import React from "react";
 
-const InfoBanner = ( {image, children} ) =>  {
+const InfoBanner = ( {id, image, children} ) =>  {
     return (
-        <div className="info-banner">
+        <div id={id} className="info-banner">
             <div className="info-banner-wrapper">
                 <div>
                     {children}

@@ -54,6 +54,8 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
     .team-header-text {
         margin-bottom: 0.5rem;
         h2 {
@@ -151,6 +153,7 @@
         ;
         row-gap: 2.5rem;
         column-gap: 1.5rem;
+        margin-bottom: 4rem;
         .team-header-text {
             grid-area: teamtitletext;
             h2 {
@@ -193,5 +196,8 @@
 @media screen and (min-width: 1024px) {
     .about-us-wrapper {
       padding: 11.25rem 0 0;
+    }
+    .team-wrapper {
+        padding: 2rem 0
     }
 }

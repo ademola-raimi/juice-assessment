@@ -8,12 +8,15 @@ import GithubLogo from "../assets/img/carbon_logo-github.svg";
 import VmWareLogo from "../assets/img/carbon_logo-vmware.svg";
 
 export const ContactUs = () => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <Layout className="gradient-bg">
             <div className="container contact-us-wrapper">
                 <div className="contact-form-section">
                     <div className="contact-info-section">
-                        <h1 className="roobert-bold-black-56px">How can we help?</h1>
+                        <h1 className="animate__animated animate__bounce roobert-bold-black-56px">How can we help?</h1>
                         <p className="roobert-regular-normal-black-18px">Making a general inquiry, or you’ll like us to talk in detail? Tell us what you need and we will get back to you as soon as possible.</p>
                         <div className="contact-credentials">
                             <div className="credentials-icons">
@@ -28,8 +31,12 @@ export const ContactUs = () => {
                         </div>
                     </div>
                     <div className="contact-form">
-                        <form>
-                            <input placeholder='First name (required)' />
+                        <form onSubmit={handleFormSubmit}>
+                            <input placeholder='First name (required)' type="text" />
+                            <input placeholder='Last name (required)' type="text" />
+                            <input placeholder='Company email (required)' type="text" />
+                            <textarea placeholder='Message (required)'></textarea>
+                            <input type="Submit" value="Submit"/>
                         </form>
                     </div>
                 </div>

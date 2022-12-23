@@ -41,6 +41,36 @@
   }
 }
 
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 160px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #111111;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #111111;;
+}
+
+
 @media screen and (min-width: 768px) {
   .contact-us-wrapper {
     margin-bottom: 4rem;

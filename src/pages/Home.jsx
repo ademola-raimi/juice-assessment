@@ -73,7 +73,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <InfoBanner image={Home13}>
+      <InfoBanner image={Home13} id="section1">
         <h2 className="roobert-bold-lighter-grey-40px">Higher levels of operational efficiency with our API suite </h2>
         <p className="roobert-regular-normal-lighter-grey-18px">Juice is an ecosystem of services making business cross border payment less complex, more reliable and compliant than ever before.</p>
         <ul>
@@ -90,16 +90,16 @@ function Home() {
                 End-to-end data security
             </li>
         </ul>
-        <ButtonIcon
-          className="button-white-bg"
-          link={{ pathname: "https://docs.spendjuice.org/docs" }}
+        <ButtonIcon 
+            className="animate__animated animate__swing button-white-bg"
+            link="https://docs.spendjuice.org/docs"
         >
             <span className="text-underline">Documentation</span>
         </ButtonIcon>
       </InfoBanner>
       <div className="container home-section-2">
         <div className="section-2-header-text">
-          <h2 className="roobert-bold-black-40px">Benefits</h2>
+          <h2 id="section2" className="animate__animated animate__bounce roobert-bold-black-40px">Benefits</h2>
           <p className="roobert-regular-normal-black-18px">Why Juice</p>
         </div>
         <div className="section-2-info-box-wrapper">
@@ -151,8 +151,8 @@ function Home() {
           </div>
           <p className="roobert-regular-normal-light-grey-12px text-uppercase">all bragging rights unreserved.*</p>
         </div>
-        <div className="section-2-header-text2">
-          <h2 className="roobert-bold-black-40px">Payment solutions for diverse use cases</h2>
+        <div id="section3" className="section-2-header-text2">
+          <h2 className="animate__animated animate__bounce roobert-bold-black-40px">Payment solutions for diverse use cases</h2>
           <p className="roobert-regular-normal-black-18px">Discover how we help some of Africa's leading businesses</p>
         </div>
         <div className="use-case-wrapper">
@@ -181,8 +181,8 @@ function Home() {
           </div>
         </div>
       </div>
-      <InfoBanner image={Home14}>
-        <h2 className="roobert-bold-lighter-grey-40px">All the guidance you'll need</h2>
+      <InfoBanner id="section4" image={Home14}>
+        <h2 className="animate__animated animate__bounce roobert-bold-lighter-grey-40px">All the guidance you'll need</h2>
         <p className="roobert-regular-normal-lighter-grey-18px">Our team of experts provide guidance from inquiry to integration and beyond. Get personalized recommendations for your business use case.</p>
         <ul>
             <li className="roobert-regular-normal-lighter-grey-18px">
@@ -199,7 +199,7 @@ function Home() {
             </li>
         </ul>
         <Button
-            className="button-white-bg"
+            className="animate__animated animate__swing button-white-bg"
             link="/contact-us"
         >
             Contact us
