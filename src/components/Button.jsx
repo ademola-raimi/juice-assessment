@@ -7,17 +7,16 @@ export const Button = (props) => {
     const { className, link, type="button", children } = props;
     return (
         <button
-            className={`button roobert-bold-black-16px ${className || ""}`}
+            className={`button roobert-bold-black-short-18px ${className || ""}`}
             type={type}
         >
             {link ? (
-                <Link to={link} target="_blank" rel="noopener noreferrer" className="button-icon">
+                <Link to={link} target="_blank" rel="noopener noreferrer">
                     {children}
                 </Link>
             ) : (
                 children
-            )}
-            
+            )} 
         </button>
     );
 };

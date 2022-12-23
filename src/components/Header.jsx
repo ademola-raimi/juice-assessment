@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from "../assets/img/logo.svg";
-import { Link, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom"; 
 import { Button } from "./Button";
 import Cancel from "../assets/img/cancel.svg";
@@ -14,7 +14,6 @@ const Header = () => {
     const location = useLocation();
 
     useEffect(() => {
-        console.log('location: ', location);
         if (location.state) {
             scrollTarget(location.state.target);
             setActive(location.state.menu);
@@ -98,7 +97,7 @@ const Header = () => {
                         <div onClick={handleNavToggle} className="cancel animate__animated animate__fadeInRight"><img src={Cancel} alt="cancel" /></div>
 
                         <a className='contact-us' href="/contact-us">
-                            <Button>
+                            <Button className="roobert-bold-black-16px">
                                 Contact Us
                             </Button>
                         </a>
@@ -106,7 +105,7 @@ const Header = () => {
                 )}
                 
                 <a className='contact-us' href="/contact-us">
-                    <Button className="button-outline">
+                    <Button className="button-outline roobert-bold-black-16px">
                         Contact Us
                     </Button>
                 </a>
