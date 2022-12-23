@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import { Button } from "./Button";
 import Cancel from "../assets/img/cancel.svg";
 import Hamburger from "../assets/img/hamburger-menu.svg";
+import "../assets/scss/header.scss";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false);

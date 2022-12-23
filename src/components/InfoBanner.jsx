@@ -1,4 +1,5 @@
 import React from "react";
+import '../assets/scss/infobanner.scss';
 
 const InfoBanner = ( {id, image, children} ) =>  {
     return (

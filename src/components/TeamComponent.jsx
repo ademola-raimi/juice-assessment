@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LinkedIn from "../assets/img/linkedIn.svg";
+import '../assets/scss/team.scss';
 
 const TeamComponent = (props) => {
     const { link, image, name, jobTitle, socialUrl } = props;

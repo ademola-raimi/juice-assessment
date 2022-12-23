@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, ButtonArrow } from "./Button";
 import ArrowUp from "../assets/img/arrow-up.svg";
 import ArrowDown from "../assets/img/arrow-down.svg";
+import '../assets/scss/usecase.scss';
 
 const UseCase = (props) => {
   const { title, content } = props;

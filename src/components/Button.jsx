@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ExternalIcon from "../assets/img/external-link.svg";
+import '../assets/scss/button.scss';
 
 export const Button = (props) => {
     const { className, link, type="button", children } = props;

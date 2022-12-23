@@ -7,6 +7,7 @@ import FadLogo from "../assets/img/fad_logo-fl.svg";
 import RewireLogo from "../assets/img/fad_logo-rewire.svg";
 import GithubLogo from "../assets/img/carbon_logo-github.svg";
 import VmWareLogo from "../assets/img/carbon_logo-vmware.svg";
+import '../assets/scss/contactus.scss';
 
 export const ContactUs = () => {
     const topRef = useRef(null);

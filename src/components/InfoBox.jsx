@@ -1,4 +1,5 @@
 import React from "react";
+import '../assets/scss/infobox.scss';
 
 const InfoBox = ( {icon, title, desc} ) =>  {
     return (

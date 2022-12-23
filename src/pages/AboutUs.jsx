@@ -5,6 +5,7 @@ import InfoBanner from '../components/InfoBanner';
 import TeamComponent from '../components/TeamComponent';
 import { Button } from "../components/Button";
 import GoToTop from '../components/GotToTop';
+import "../assets/scss/aboutus.scss";
 
 import IntroImage from "../assets/img/about-intro-image.png";
 import NetflixBubbles from "../assets/img/netflix-bubbles.png";
@@ -12,7 +13,7 @@ import HandMoney from "../assets/img/hand-money.svg";
 import TeamMember from "../assets/img/team-member.png";
 import SuccessIcon from "../assets/img/success.svg";
 import Home14 from "../assets/img/home14.png";
-
+import '../assets/scss/contactus.scss';
 
 export const AboutUs = () => {
     const topRef = useRef(null);

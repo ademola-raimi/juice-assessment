@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
 import GoToTop from '../components/GotToTop';
+import '../assets/scss/terms-condition.scss';
 
 export const TermsConditions = () => {
     const topRef = useRef(null);

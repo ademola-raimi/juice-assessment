@@ -19,6 +19,7 @@ import Home13 from "../assets/img/home13.png";
 import Home14 from "../assets/img/home14.png";
 
 import { Button, ButtonIcon } from "../components/Button";
+import '../assets/scss/home.scss';
 
 function Home() {
   const topRef = useRef(null);

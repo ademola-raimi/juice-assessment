@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import ArticleSmallImage from "../assets/img/article-small.png";
 import { Button } from '../components/Button';
 import GoToTop from '../components/GotToTop';
+import '../assets/scss/articles.scss';
 
 export const Articles = () => {
     const topRef = useRef(null)
