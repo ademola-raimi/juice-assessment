@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from "../assets/img/logo.svg";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
+import Cancel from "../assets/img/cancel.svg";
+import Hamburger from "../assets/img/hamburger-menu.svg";
 
 const Header = () => {
+    const [toggle, setToggle] = useState(false)
+
+    const handleNavToggle = () => {
+        setToggle(!toggle);
+    }
 
     return (
         <div className="header">
             <div className="header-wrapper">
-                <Link to="/">
+                <Link className="animate__animated animate__rubberBand" to="/">
                     <img className="logo" src={Logo} alt="Juice Logo" />
                 </Link>
+                <div onClick={handleNavToggle} className="hamburger animate__animated animate__fadeInRight"><img src={Hamburger} alt="hamburger menu" /></div>
                 <div className="navbar roobert-regular-normal-black-16px">
                     <Link to="/">
                         <div className="nav-item">Documentation</div>
@@ -25,13 +33,36 @@ const Header = () => {
                         <div className="nav-item">Guidance</div>
                     </Link>
                 </div>
-                <Link to="/contact-us">
+                {toggle && (
+                    <div className='navbar-mobile'>
+                        <Link className="link animate__animated animate__fadeInRight" to="/">
+                            Documentation
+                        </Link>
+                        <Link className="link animate__animated animate__fadeInRight" to="/">
+                            Benefits
+                        </Link>
+                        <Link className="link animate__animated animate__fadeInRight" to="/">
+                        Use cases
+                        </Link>
+                        <Link className="link animate__animated animate__fadeInRight" to="/">
+                            Guidance
+                        </Link>
+                        <div onClick={handleNavToggle} className="cancel animate__animated animate__fadeInRight"><img src={Cancel} alt="cancel" /></div>
+
+                        <Link className='contact-us' to="/contact-us">
+                            <Button>
+                                Contact Us
+                            </Button>
+                        </Link>
+                    </div>
+                )}
+                
+                <Link className='contact-us' to="/contact-us">
                     <Button className="button-outline">
                         Contact Us
                     </Button>
                 </Link>
             </div>
-            
         </div>
     );
 }
