@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Logo from "../assets/img/logo.svg";
 import { scroller } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom"; 
 import { Button } from "./Button";
 import Cancel from "../assets/img/cancel.svg";
@@ -38,9 +39,9 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header-wrapper">
-                <a className="animate__animated animate__rubberBand" href="/">
+                <Link className="animate__animated animate__rubberBand" to="/">
                     <img className="logo" src={Logo} alt="Juice Logo" />
-                </a>
+                </Link>
                 <div onClick={handleNavToggle} className="hamburger animate__animated animate__fadeInRight"><img src={Hamburger} alt="hamburger menu" /></div>
                 <div className="navbar roobert-regular-normal-black-16px">
                     <div
@@ -96,19 +97,19 @@ const Header = () => {
                         </div>
                         <div onClick={handleNavToggle} className="cancel animate__animated animate__fadeInRight"><img src={Cancel} alt="cancel" /></div>
 
-                        <a className='contact-us' href="/contact-us">
+                        <Link className='contact-us' to="/contact-us">
                             <Button className="roobert-bold-black-16px">
                                 Contact Us
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                 )}
                 
-                <a className='contact-us' href="/contact-us">
+                <Link className='contact-us' to="/contact-us">
                     <Button className="button-outline roobert-bold-black-16px">
                         Contact Us
                     </Button>
-                </a>
+                </Link>
             </div>
         </div>
     );
